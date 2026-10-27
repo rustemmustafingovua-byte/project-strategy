@@ -1,0 +1,156 @@
+{
+  "server_name": "Lumen Chain Community",
+  "bot_setup": {
+    "zero_budget_stack": [
+      {
+        "name": "Carl-bot",
+        "purpose": "Автомод, варны, reaction roles",
+        "invite_url": "https://carl.gg/invite",
+        "config": {
+          "automod_rules": [
+            {
+              "id": "spam",
+              "name": "Спам",
+              "trigger": "5 сообщений за 10 секунд",
+              "action": "mute 5m"
+            },
+            {
+              "id": "mass_mentions",
+              "name": "Массовые упоминания",
+              "trigger": ">3 @everyone/@here за сообщение",
+              "action": "delete + warn"
+            },
+            {
+              "id": "profanity",
+              "name": "Оскорбления",
+              "trigger": "Запрещённые слова из словаря",
+              "action": "delete + mute 10m"
+            },
+            {
+              "id": "scam_links",
+              "name": "Скам-ссылки",
+              "trigger": "Чёрный список доменов",
+              "action": "delete + warn"
+            },
+            {
+              "id": "emoji_caps_spam",
+              "name": "Спам эмодзи/капсом",
+              "trigger": ">10 эмодзи или капса подряд",
+              "action": "delete + warn"
+            },
+            {
+              "id": "advertising",
+              "name": "Неразрешённая реклама",
+              "trigger": "Внешние ссылки от не-модераторов",
+              "action": "delete + warn"
+            }
+          ],
+          "warn_thresholds": {
+            "3_warns": "mute 24h",
+            "5_warns": "kick",
+            "7_warns": "ban"
+          },
+          "reaction_roles": {
+            "📢": "announcements-role",
+            "💬": "general-chat-role",
+            "⛓️": "lumen-chain-role",
+            "📈": "trading-role",
+            "🛠️": "dev-role",
+            "🎉": "community-role"
+          }
+        }
+      },
+      {
+        "name": "TicketTool",
+        "purpose": "Тикеты поддержки, приватные комнаты",
+        "invite_url": "https://tickettool.xyz/invite",
+        "config": {
+          "panel_channel": "#support",
+          "panel_message": "🎫 Нужна помощь? Открой тикет",
+          "categories": [
+            {
+              "name": "Вопросы по кошельку",
+              "emoji": "💼",
+              "assigned_to": "Mod"
+            },
+            {
+              "name": "Технические проблемы",
+              "emoji": "🔧",
+              "assigned_to": "Dev"
+            },
+            {
+              "name": "Скам/спор",
+              "emoji": "⚠️",
+              "assigned_to": "Admin"
+            }
+          ]
+        }
+      },
+      {
+        "name": "MEE6",
+        "purpose": "Уровни, приветствия, модерация",
+        "invite_url": "https://mee6.xyz/invite",
+        "config": {
+          "welcome_message": "👋 Добро пожаловать, {user}! | Сервер: Lumen Chain Community | Правила: #rules",
+          "level_up_message": "🎉 {user} достиг {level} уровня!",
+          "level_roles": {
+            "5": "Community",
+            "10": "Holder",
+            "20": "Dev"
+          }
+        }
+      },
+      {
+        "name": "GiveawayBot",
+        "purpose": "Раздачи, конкурсы",
+        "invite_url": "https://giveawaybot.party/invite",
+        "config": {
+          "allowed_channels": ["#giveaways", "#events"],
+          "required_role_for_host": "Mod",
+          "duration_presets": ["1h", "6h", "24h", "7d"]
+        }
+      }
+    ],
+    "custom_bot": {
+      "name": "LumenBot",
+      "description": "Кастомный бот для Lumen Chain Community",
+      "language": "Python (discord.py) / JavaScript (discord.js)",
+      "features": [
+        "Приветствие новых участников",
+        "Выдача роли Holder по адресу кошелька",
+        "Интеграция с API Lumen Chain (цены, блоки)",
+        "Автоматические напоминания о голосовании",
+        "Команда /verify для подтверждения холдера"
+      ],
+      "hosting": "Railway.app / Replit / Vercel (free tier)",
+      "token_storage": ".env с DISCORD_TOKEN, LUMEN_API_KEY"
+    }
+  },
+  "webhooks": {
+    "github_commits": {
+      "channel": "#dev-talk",
+      "url": "<WEBHOOK_URL>",
+      "events": ["push", "release"]
+    },
+    "price_alerts": {
+      "channel": "#price-talk",
+      "url": "<WEBHOOK_URL>",
+      "threshold": "5% изменение за 1 час"
+    },
+    "governance": {
+      "channel": "#governance",
+      "url": "<WEBHOOK_URL>",
+      "events": ["new_proposal", "voting_started", "voting_ended"]
+    }
+  },
+  "integration_checklist": [
+    "✅ Добавить Carl-bot и пройти авторизацию",
+    "✅ Настроить автомод правила",
+    "✅ Установить TicketTool и создать панель тикетов",
+    "✅ Настроить MEE6 приветствия и уровни",
+    "✅ Добавить GiveawayBot",
+    "✅ Создать webhook для GitHub коммитов",
+    "✅ Создать webhook для ценовых алертов",
+    "✅ Протестировать все команды и уведомления"
+  ]
+}
