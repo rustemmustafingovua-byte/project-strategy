@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#334155;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <!-- Sidebar -->
+  <rect x="0" y="0" width="180" height="500" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <rect x="20" y="30" width="140" height="20" rx="4" fill="#38bdf8" opacity="0.9"/>
+  <text x="100" y="45" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#0f172a" text-anchor="middle">LUMEN CHAIN</text>
+  
+  <rect x="20" y="80" width="140" height="36" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="40" y="103" font-family="system-ui, sans-serif" font-size="13" fill="#e2e8f0">Dashboard</text>
+  <rect x="20" y="124" width="140" height="36" rx="6" fill="#0f172a"/>
+  <text x="40" y="147" font-family="system-ui, sans-serif" font-size="13" fill="#94a3b8">Wallet</text>
+  <rect x="20" y="168" width="140" height="36" rx="6" fill="#0f172a"/>
+  <text x="40" y="191" font-family="system-ui, sans-serif" font-size="13" fill="#94a3b8">Swap</text>
+  <rect x="20" y="212" width="140" height="36" rx="6" fill="#0f172a"/>
+  <text x="40" y="235" font-family="system-ui, sans-serif" font-size="13" fill="#94a3b8">Farming</text>
+  <rect x="20" y="256" width="140" height="36" rx="6" fill="#0f172a"/>
+  <text x="40" y="279" font-family="system-ui, sans-serif" font-size="13" fill="#94a3b8">Governance</text>
+  
+  <!-- Main content -->
+  <text x="220" y="50" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#f1f5f9">Dashboard</text>
+  <text x="220" y="75" font-family="system-ui, sans-serif" font-size="13" fill="#94a3b8">Overview of your portfolio</text>
+  
+  <!-- Stats row -->
+  <rect x="220" y="100" width="170" height="90" rx="10" fill="url(#card)" stroke="#334155" stroke-width="1"/>
+  <text x="240" y="125" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">TVL</text>
+  <text x="240" y="150" font-family="system-ui, sans-serif" font-size="18" font-weight="600" fill="#f1f5f9">$1,247,832</text>
+  <text x="240" y="170" font-family="system-ui, sans-serif" font-size="11" fill="#38bdf8">+12.4%</text>
+  
+  <rect x="400" y="100" width="170" height="90" rx="10" fill="url(#card)" stroke="#334155" stroke-width="1"/>
+  <text x="420" y="125" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">24h Volume</text>
+  <text x="420" y="150" font-family="system-ui, sans-serif" font-size="18" font-weight="600" fill="#f1f5f9">$384,291</text>
+  <text x="420" y="170" font-family="system-ui, sans-serif" font-size="11" fill="#38bdf8">+5.1%</text>
+  
+  <rect x="580" y="100" width="170" height="90" rx="10" fill="url(#card)" stroke="#334155" stroke-width="1"/>
+  <text x="600" y="125" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">APY</text>
+  <text x="600" y="150" font-family="system-ui, sans-serif" font-size="18" font-weight="600" fill="#f1f5f9">24.8%</text>
+  <text x="600" y="170" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">Farming</text>
+  
+  <!-- Pool list -->
+  <rect x="220" y="220" width="530" height="240" rx="10" fill="url(#card)" stroke="#334155" stroke-width="1"/>
+  <text x="240" y="250" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#f1f5f9">Top Pools</text>
+  
+  <line x1="240" y1="265" x2="730" y2="265" stroke="#334155" stroke-width="1"/>
+  
+  <!-- Pool 1 -->
+  <rect x="240" y="280" width="460" height="40" rx="6" fill="#0f172a"/>
+  <text x="260" y="305" font-family="system-ui, sans-serif" font-size="13" font-weight="500" fill="#f1f5f9">LMN / USDC</text>
+  <text x="460" y="305" font-family="system-ui, sans-serif" font-size="13" fill="#94a3b8" text-anchor="middle">24.8%</text>
+  <text x="620" y="305" font-family="system-ui, sans-serif" font-size="13" fill="#94a3b8" text-anchor="middle">$412k</text>
+  <text x="700" y="305" font-family="system-ui, sans-serif" font-size="12" fill="#38bdf8" text-anchor="middle">+2.4%</text>
+  
+  <!-- Pool 2 -->
+  <rect x="240" y="330" width="460" height="40" rx="6" fill="#0f172a"/>
+  <text x="260" y="355" font-family="system-ui, sans-serif" font-size="13" font-weight="500" fill="#f1f5f9">ETH / LMN</text>
+  <text x="460" y="355" font-family="system-ui, sans-serif" font-size="13" fill="#94a3b8" text-anchor="middle">18.2%</text>
+  <text x="620" y="355" font-family="system-ui, sans-serif" font-size="13" fill="#94a3b8" text-anchor="middle">$328k</text>
+  <text x="700" y="355" font-family="system-ui, sans-serif" font-size="12" fill="#38bdf8" text-anchor="middle">+1.8%</text>
+  
+  <!-- Pool 3 -->
+  <rect x="240" y="380" width="460" height="40" rx="6" fill="#0f172a"/>
+  <text x="260" y="405" font-family="system-ui, sans-serif" font-size="13" font-weight="500" fill="#f1f5f9">USDT / USDC</text>
+  <text x="460" y="405" font-family="system-ui, sans-serif" font-size="13" fill="#94a3b8" text-anchor="middle">12.4%</text>
+  <text x="620" y="405" font-family="system-ui, sans-serif" font-size="13" fill="#94a3b8" text-anchor="middle">$256k</text>
+  <text x="700" y="405" font-family="system-ui, sans-serif" font-size="12" fill="#f87171" text-anchor="middle">-0.5%</text>
+  
+  <!-- Pool 4 -->
+  <rect x="240" y="430" width="460" height="40" rx="6" fill="#0f172a"/>
+  <text x="260" y="455" font-family="system-ui, sans-serif" font-size="13" font-weight="500" fill="#f1f5f9">BTC / LMN</text>
+  <text x="460" y="455" font-family="system-ui, sans-serif" font-size="13" fill="#94a3b8" text-anchor="middle">8.6%</text>
+  <text x="620" y="455" font-family="system-ui, sans-serif" font-size="13" fill="#94a3b8" text-anchor="middle">$198k</text>
+  <text x="700" y="455" font-family="system-ui, sans-serif" font-size="12" fill="#38bdf8" text-anchor="middle">+4.2%</text>
+</svg>
