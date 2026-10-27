@@ -1,0 +1,222 @@
+[
+  {
+    "platform": "reddit",
+    "subreddit": "web3",
+    "title": "We built an open-source self-hosted alternative to [popular analytics] — here's how it works",
+    "body": "After months of frustration with SaaS analytics that collect too much data, we shipped a zero-knowledge, self-hosted analytics stack. It runs on a single VPS, ships under 50MB, and respects user privacy by default. Happy to answer questions.",
+    "scheduled_time": "2026-10-28T09:00:00Z",
+    "status": "pending"
+  },
+  {
+    "platform": "reddit",
+    "subreddit": "cryptocurrency",
+    "title": "Why on-chain analytics doesn't have to mean surrendering your data to a third party",
+    "body": "Most crypto analytics tools today still rely on centralized data lakes. We reversed the model: everything stays in your infra, queries stay local, and you get the same insight depth. Early feedback welcome.",
+    "scheduled_time": "2026-10-28T14:00:00Z",
+    "status": "pending"
+  },
+  {
+    "platform": "reddit",
+    "subreddit": "blockchain",
+    "title": "Show: lightweight blockchain indexer with pluggable storage backends",
+    "body": "Built a modular indexer that works with EVM chains and can store data in SQLite, Postgres, or flat files. It's extensible, has a clean API, and the core is under 2k LOC. Links in comments.",
+    "scheduled_time": "2026-10-29T09:00:00Z",
+    "status": "pending"
+  },
+  {
+    "platform": "reddit",
+    "subreddit": "technology",
+    "title": "Open-source observability stack that actually runs on a Raspberry Pi",
+    "body": "We optimized our entire stack for ARM and low-memory environments. Metrics, logs, and traces — all in one binary, no separate services needed. Here are the benchmarks and setup steps.",
+    "scheduled_time": "2026-10-29T15:00:00Z",
+    "status": "pending"
+  },
+  {
+    "platform": "reddit",
+    "subreddit": "selfhosted",
+    "title": "Self-hosted analytics, logging, and uptime monitoring in 3 Docker containers",
+    "body": "Replaced Datadog and UptimeRobot with our own stack. Total cost: $0. Total containers: 3. Total setup time: 12 minutes. Full config included.",
+    "scheduled_time": "2026-10-30T09:00:00Z",
+    "status": "pending"
+  },
+  {
+    "platform": "reddit",
+    "subreddit": "web3",
+    "title": "How we made wallet connect work offline with local-first auth",
+    "body": "Offline-first auth for dApps is hard. We built a proof-of-concept that syncs when connectivity returns, no custodial bridge required. Open for contributors.",
+    "scheduled_time": "2026-10-30T14:00:00Z",
+    "status": "pending"
+  },
+  {
+    "platform": "reddit",
+    "subreddit": "cryptocurrency",
+    "title": "Tracking DeFi yields without relying on centralized APIs",
+    "body": "Our tool reads chain state directly from RPC nodes and computes APY/APY without third-party data providers. Zero trust, zero leakage. Demo and repo inside.",
+    "scheduled_time": "2026-10-31T09:00:00Z",
+    "status": "pending"
+  },
+  {
+    "platform": "reddit",
+    "subreddit": "blockchain",
+    "title": "Smart contract event indexing in under 100 lines of Rust",
+    "body": "We extracted our event indexer from a larger project. It filters, parses, and stores contract events with minimal overhead. Feedback on API design appreciated.",
+    "scheduled_time": "2026-10-31T15:00:00Z",
+    "status": "pending"
+  },
+  {
+    "platform": "reddit",
+    "subreddit": "technology",
+    "title": "We replaced our entire cloud logging pipeline with a single open-source binary",
+    "body": "Loki + Promtail felt overkill. Our binary ships structured logs, tail-based sampling, and a tiny query engine. Here's the migration story.",
+    "scheduled_time": "2026-11-01T09:00:00Z",
+    "status": "pending"
+  },
+  {
+    "platform": "reddit",
+    "subreddit": "selfhosted",
+    "title": "Self-hosted CI/CD for personal projects that actually respects your hardware",
+    "body": "GitHub Actions eats free tier limits. Our self-hosted runner manager reuses idle cycles, supports ARM, and gives you full pipeline visibility. Free and open source.",
+    "scheduled_time": "2026-11-01T14:00:00Z",
+    "status": "pending"
+  },
+  {
+    "platform": "twitter",
+    "title": "Thread: We rebuilt web3 analytics from scratch. Here are 7 mistakes we made so you don't have to.",
+    "body": "1/ We assumed everyone wanted dashboards. They wanted raw queries. 2/ We over-engineered auth. 3/ We ignored self-hosters. 4/ We shipped before benchmarks. 5/ We forgot offline use cases. 6/ We treated docs as an afterthought. 7/ We didn't listen to the first 10 users. Full thread on what we learned.",
+    "scheduled_time": "2026-10-28T10:00:00Z",
+    "status": "pending"
+  },
+  {
+    "platform": "twitter",
+    "title": "Single post: Just open-sourced our entire analytics stack. Zero telemetry, zero cloud lock-in, zero cost. Link in bio.",
+    "body": "If you've ever wanted to own your data stack end-to-end, this is for you. Self-host in 5 minutes or run it on your laptop.",
+    "scheduled_time": "2026-10-28T16:00:00Z",
+    "status": "pending"
+  },
+  {
+    "platform": "twitter",
+    "title": "Thread: The case against vendor lock-in in crypto analytics, and what we built instead.",
+    "body": "1/ Vendor lock-in isn't just pricing — it's data gravity. 2/ Most 'on-chain' tools still stream your queries to AWS. 3/ Self-hosting used to be painful. 4/ We changed that with a single binary. 5/ Here's the architecture. 6/ Here's how to try it in 2 commands. 7/ Here's what's next.",
+    "scheduled_time": "2026-10-29T10:00:00Z",
+    "status": "pending"
+  },
+  {
+    "platform": "twitter",
+    "title": "Single post: Hot take — if your analytics tool can't run offline, it's not analytics, it's surveillance.",
+    "body": "Unpopular opinion? Let's discuss.",
+    "scheduled_time": "2026-10-29T16:00:00Z",
+    "status": "pending"
+  },
+  {
+    "platform": "twitter",
+    "title": "Thread: How to go from zero to self-hosted observability in under 10 minutes.",
+    "body": "1/ Clone repo. 2/ docker compose up. 3/ Open port 3000. 4/ Done. In this thread, I'll share the exact config we use for metrics, logs, and uptime — plus how to back it up to S3 or local disk.",
+    "scheduled_time": "2026-10-30T10:00:00Z",
+    "status": "pending"
+  },
+  {
+    "platform": "twitter",
+    "title": "Single post: 3 years of building infra taught us one thing: simplicity scales. Our new release is 60% smaller and 2x faster.",
+    "body": "Details and benchmarks in the blog.",
+    "scheduled_time": "2026-10-30T16:00:00Z",
+    "status": "pending"
+  },
+  {
+    "platform": "twitter",
+    "title": "Thread: Why we chose Rust for our analytics engine — and why it matters for self-hosters.",
+    "body": "1/ Memory safety = fewer crashes on small boxes. 2/ Single binary = no runtime install. 3/ Async I/O = efficient under load. 4/ Tiny surface area = easier to audit. 5/ WASM target = run in browser. 6/ We compiled to ARM in 2 hours. 7/ Here's the memory profile.",
+    "scheduled_time": "2026-10-31T10:00:00Z",
+    "status": "pending"
+  },
+  {
+    "platform": "twitter",
+    "title": "Single post: We're hiring remote builders who care about privacy-first infra. No algorithms, no surveillance, just shipping.",
+    "body": "DM open.",
+    "scheduled_time": "2026-10-31T16:00:00Z",
+    "status": "pending"
+  },
+  {
+    "platform": "twitter",
+    "title": "Thread: The complete guide to migrating off cloud analytics without losing historical data.",
+    "body": "1/ Export your current schema. 2/ Spin up our stack. 3/ Run the importer. 4/ Cut over DNS. 5/ Archive old dashboards. 6/ Decommission SaaS. 7/ Sleep better. Full script included.",
+    "scheduled_time": "2026-11-01T10:00:00Z",
+    "status": "pending"
+  },
+  {
+    "platform": "twitter",
+    "title": "Single post: Open source isn't free. It's ours. Support the project with a star or a PR.",
+    "body": "Every contribution counts.",
+    "scheduled_time": "2026-11-01T16:00:00Z",
+    "status": "pending"
+  },
+  {
+    "platform": "hackernews",
+    "title": "Show HN: We built a self-hosted analytics stack that runs on a Raspberry Pi",
+    "body": "After testing every open-source analytics tool available, we decided to build our own. It includes metrics, logs, and uptime monitoring in a single binary with zero external dependencies. Happy to answer questions about architecture, performance, or roadmap.",
+    "scheduled_time": "2026-10-28T13:00:00Z",
+    "status": "pending"
+  },
+  {
+    "platform": "hackernews",
+    "title": "Ask HN: What's missing from current self-hosted observability tools?",
+    "body": "We're building an open-source observability stack and want to hear from the HN community. What do you wish existed today that doesn't? What's broken in the current offerings? What would make you switch?",
+    "scheduled_time": "2026-10-29T13:00:00Z",
+    "status": "pending"
+  },
+  {
+    "platform": "hackernews",
+    "title": "Show HN: Open-source blockchain indexer with pluggable storage (SQLite, Postgres, flat files)",
+    "body": "Built a lightweight indexer for EVM chains that's storage-backend agnostic. Core is under 2k LOC, extensible via plugins, and designed for local-first workflows. Would love feedback from people running their own nodes.",
+    "scheduled_time": "2026-10-30T13:00:00Z",
+    "status": "pending"
+  },
+  {
+    "platform": "hackernews",
+    "title": "Ask HN: Best practices for self-hosting with limited hardware?",
+    "body": "We're seeing more users run our stack on Raspberry Pi and old laptops. What hardware constraints do you push against? How do you handle backups, updates, and monitoring on low-power machines?",
+    "scheduled_time": "2026-10-31T13:00:00Z",
+    "status": "pending"
+  },
+  {
+    "platform": "hackernews",
+    "title": "Show HN: Zero-knowledge analytics – query your data without sending it anywhere",
+    "body": "Our new query engine runs entirely client-side or on your own server. No telemetry, no cloud processing, no data leakage. Built for teams that need insight without exposure. Benchmark results and source inside.",
+    "scheduled_time": "2026-11-01T13:00:00Z",
+    "status": "pending"
+  },
+  {
+    "platform": "linkedin",
+    "title": "Why we invested in privacy-first infrastructure instead of chasing AI hype",
+    "body": "The market is flooded with AI wrappers. We chose a harder path: build reliable, open-source infrastructure that respects user data. Here's why privacy-first isn't just ethical — it's becoming a competitive advantage.",
+    "scheduled_time": "2026-10-28T11:00:00Z",
+    "status": "pending"
+  },
+  {
+    "platform": "linkedin",
+    "title": "The case for local-first engineering in 2026",
+    "body": "Remote work normalized async. Cloud centralization normalized surveillance. Local-first is the next logical step. As engineers, we should build tools that work offline, respect ownership, and don't phone home. Our new open-source release is a step in that direction.",
+    "scheduled_time": "2026-10-29T11:00:00Z",
+    "status": "pending"
+  },
+  {
+    "platform": "linkedin",
+    "title": "We just open-sourced our entire analytics stack. Here's what the business case looks like.",
+    "body": "Cost: $0. Lock-in: zero. Speed: 2x faster than our previous SaaS. Team size: 3 engineers. Sometimes the best infrastructure decision is to stop renting and start owning. Details inside.",
+    "scheduled_time": "2026-10-30T11:00:00Z",
+    "status": "pending"
+  },
+  {
+    "platform": "linkedin",
+    "title": "Hiring: Remote engineers who believe open source is a competitive moat",
+    "body": "We're a small, distributed team building privacy-first observability. We value craft over hype, depth over breadth, and shipping over meeting. If you want to work on real infrastructure, reach out.",
+    "scheduled_time": "2026-10-31T11:00:00Z",
+    "status": "pending"
+  },
+  {
+    "platform": "linkedin",
+    "title": "How self-hosted tools changed our startup's runway by 40%",
+    "body": "By replacing six SaaS subscriptions with self-hosted equivalents, we cut recurring costs, removed vendor risk, and gained full control over our data. Here's the exact stack and the math.",
+    "scheduled_time": "2026-11-01T11:00:00Z",
+    "status": "pending"
+  }
+]
