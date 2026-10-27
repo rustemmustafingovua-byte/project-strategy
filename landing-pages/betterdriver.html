@@ -3,6 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Open Graph -->
+<meta property="og:title" content="BetterDriver — Анализ и улучшение водительского стиля">
+<meta property="og:description" content="Анализ вождения, экономия топлива и персонализированные рекомендации для безопасной и экономичной езды.">
+<meta property="og:url" content="https://rustemmustafingovua-byte.github.io/landing-pages/betterdriver.html">
+<meta property="og:image" content="https://rustemmustafingovua-byte.github.io/landing-pages/og-betterdriver.png">
+<meta property="og:type" content="website">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BetterDriver — Анализ и улучшение водительского стиля">
+<meta name="twitter:description" content="Анализ вождения, экономия топлива и персонализированные рекомендации для безопасной и экономичной езды.">
+<meta name="twitter:image" content="https://rustemmustafingovua-byte.github.io/landing-pages/og-betterdriver.png">
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "BetterDriver",
+  "url": "https://rustemmustafingovua-byte.github.io/landing-pages/betterdriver.html",
+  "description": "Анализ вождения, экономия топлива и персонализированные рекомендации."
+}
+</script>
+<!-- Analytics: Plausible (free tier) -->
+<script defer data-domain="rustemmustafingovua-byte.github.io" src="https://plausible.io/js/script.js"></script>
+<script>
+  window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) };
+  function trackEvent(name, data) {
+    if (typeof plausible !== 'undefined') {
+      plausible(name, { props: data });
+    }
+    console.log('Analytics event:', name, data);
+  }
+</script>
 <title>BetterDriver — Анализ и улучшение водительского стиля</title>
 <style>
   :root { --bg: #0b0e11; --bg2: #111; --bg3: #1e2026; --accent: #f0b90b; --text: #eaecef; --muted: #848e9c; }
@@ -94,7 +126,12 @@
           body: JSON.stringify({ email, source: location.pathname })
         })
         .then(r => r.json())
-        .then(d => { status.textContent = d.ok ? '✅ Подписано!' : 'Ошибка'; })
+        .then(d => {
+          status.textContent = d.ok ? '✅ Подписано!' : 'Ошибка';
+          if (d.ok) {
+            trackEvent('email_capture', { source: location.pathname });
+          }
+        })
         .catch(() => { status.textContent = 'Ошибка соединения'; })
       }
       </script>

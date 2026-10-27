@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://rustemmustafingovua-byte.github.io/landing-pages/sitemap.xml
+
+# Crawl-delay for polite bots
+Crawl-delay: 1
