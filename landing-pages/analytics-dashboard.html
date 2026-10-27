@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lumen Chain — Analytics Dashboard</title>
+<style>
+  :root { --bg: #0b0e11; --bg2: #111; --bg3: #1e2026; --accent: #f0b90b; --text: #eaecef; --muted: #848e9c; --ok: #3fb950; --err: #f85149; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; padding: 2rem; }
+  h1 { font-size: 1.8rem; margin-bottom: 1.5rem; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+  .card { background: var(--bg2); border: 1px solid var(--bg3); border-radius: 12px; padding: 1.2rem; }
+  .card h3 { font-size: 0.85rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+  .card .value { font-size: 2rem; font-weight: 700; color: var(--accent); }
+  table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+  th, td { text-align: left; padding: 0.6rem 0.8rem; border-bottom: 1px solid var(--bg3); }
+  th { color: var(--muted); font-weight: 600; font-size: 0.85rem; }
+  tr:hover { background: var(--bg2); }
+  .status { display: inline-flex; align-items: center; gap: 6px; font-size: 0.85rem; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; }
+  .dot.ok { background: var(--ok); }
+  .dot.err { background: var(--err); }
+  .empty { color: var(--muted); font-style: italic; }
+</style>
+</head>
+<body>
+  <h1>📊 Marketing Analytics</h1>
+  <div class="grid">
+    <div class="card">
+      <h3>Email captures</h3>
+      <div class="value" id="total-emails">—</div>
+    </div>
+    <div class="card">
+      <h3>Landing pages</h3>
+      <div class="value">6</div>
+    </div>
+    <div class="card">
+      <h3>Plausible status</h3>
+      <div class="value" id="plausible-status" style="font-size: 1rem;">—</div>
+    </div>
+  </div>
+
+  <h2 style="font-size: 1.2rem; margin-bottom: 0.8rem;">Recent email captures</h2>
+  <table>
+    <thead>
+      <tr><th>Email</th><th>Source</th><th>Time</th></tr>
+    </thead>
+    <tbody id="email-table">
+      <tr><td colspan="3" class="empty">Loading...</td></tr>
+    </tbody>
+  </table>
+
+  <script>
+    async function loadEmails() {
+      try {
+        const res = await fetch('http://127.0.0.1:18902/api/emails?admin=1');
+        if (!res.ok) throw new Error('Admin endpoint requires EMAIL_CAPTURE_ADMIN=1');
+        const data = await res.json();
+        document.getElementById('total-emails').textContent = data.total;
+        const tbody = document.getElementById('email-table');
+        if (!data.emails.length) {
+          tbody.innerHTML = '<tr><td colspan="3" class="empty">No emails yet</td></tr>';
+          return;
+        }
+        tbody.innerHTML = data.emails.slice(-20).reverse().map(e => `
+          <tr>
+            <td>${escapeHtml(e.email)}</td>
+            <td>${escapeHtml(e.source)}</td>
+            <td>${new Date(e.ts).toLocaleString('ru-RU')}</td>
+          </tr>
+        `).join('');
+      } catch (err) {
+        document.getElementById('total-emails').textContent = '—';
+        document.getElementById('email-table').innerHTML = `<tr><td colspan="3" class="empty">${escapeHtml(err.message)}</td></tr>`;
+      }
+    }
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+    // Check Plausible
+    fetch('https://plausible.io/api/v1/stats/aggregate?site_id=rustemmustafingovua-byte.github.io&metrics=visitors,pageviews', {
+      headers: { 'Authorization': 'Bearer' }
+    }).then(r => {
+      const el = document.getElementById('plausible-status');
+      if (r.ok) {
+        el.innerHTML = '<span class="dot ok"></span> Active';
+      } else {
+        el.innerHTML = '<span class="dot err"></span> No data yet';
+      }
+    }).catch(() => {
+      document.getElementById('plausible-status').innerHTML = '<span class="dot err"></span> Unavailable';
+    });
+    loadEmails();
+    setInterval(loadEmails, 30000);
+  </script>
+</body>
+</html>
