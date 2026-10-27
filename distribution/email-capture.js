@@ -15,7 +15,7 @@ import { readFileSync, writeFileSync, existsSync, mkdirSync } from "node:fs"
 import { join } from "node:path"
 
 const DATA_FILE = join(import.meta.dirname, "emails.json")
-const PORT = process.env.EMAIL_CAPTURE_PORT || 18901
+const PORT = process.env.EMAIL_CAPTURE_PORT || 18910
 
 let emails = []
 if (existsSync(DATA_FILE)) {
