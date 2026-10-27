@@ -1,0 +1,12 @@
+[
+  {
+    "email": "test@example.com",
+    "source": "lumen-chain",
+    "ts": "2026-10-27T17:38:59.833Z"
+  },
+  {
+    "email": "test@test.com",
+    "source": "unknown",
+    "ts": "2026-10-27T17:40:42.527Z"
+  }
+]

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Rustem Mustafin Projects</title>
+    <link>https://rustemmustafingovua-byte.github.io/landing-pages/</link>
+    <description>Web3 + AI projects by Rustem Mustafin</description>
+    
+    <item>
+      <title>Как я построил блокчейн на TypeScript</title>
+      <link>https://rustemmustafingovua-byte.github.io/landing-pages/blog/-typescript</link>
+      <description>Когда я впервые услышал "сделай свой блокчейн", подумал — ну да, ещё один велосипед. Но потом я действительно сел и написал <b>Lumen Chain</b> на чистом TypeScript, без Go, без Rust, без магии. И вот что</description>
+      <pubDate>2026-10-27T17:34:46.995Z</pubDate>
+      <guid>https://rustemmustafingovua-byte.github.io/landing-pages/blog/-typescript</guid>
+    </item>
+
+    <item>
+      <title>Как я нашел $10k в забытых кошельках</title>
+      <link>https://rustemmustafingovua-byte.github.io/landing-pages/blog/-10k-</link>
+      <description>Я не эксперт по OSINT. Я просто один раз перестал удалять старые файлы и обнаружил, что мой цифровой хлам стоит больше, чем мой ноутбук. Вот история о том, как <b>Wallet Hygiene</b> спас мне $10,000 и че</description>
+      <pubDate>2026-10-27T17:34:46.997Z</pubDate>
+      <guid>https://rustemmustafingovua-byte.github.io/landing-pages/blog/-10k-</guid>
+    </item>
+
+    <item>
+      <title>x402: платные AI API без подписок</title>
+      <link>https://rustemmustafingovua-byte.github.io/landing-pages/blog/x402-ai-api-</link>
+      <description>Каждый раз, когда я вижу, как стартап берёт $49/мес за доступ к LLM API, мне хочется плакать. Особенно когда бэкенд на самом деле работает с открытыми моделями, а абонентская плата — это просто маркет</description>
+      <pubDate>2026-10-27T17:34:46.997Z</pubDate>
+      <guid>https://rustemmustafingovua-byte.github.io/landing-pages/blog/x402-ai-api-</guid>
+    </item>
+  </channel>
+</rss>

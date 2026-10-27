@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agent x402 — Платёжный протокол для AI-агентов</title>
+<style>
+  :root { --bg: #0b0e11; --bg2: #111; --bg3: #1e2026; --accent: #f0b90b; --text: #eaecef; --muted: #848e9c; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif; line-height: 1.6; }
+  header { border-bottom: 1px solid var(--bg3); padding: 1.2rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+  .logo { font-weight: 800; font-size: 1.4rem; color: var(--accent); letter-spacing: -0.5px; }
+  nav a { color: var(--muted); text-decoration: none; margin-left: 1.5rem; font-size: .95rem; transition: color .2s; }
+  nav a:hover { color: var(--accent); }
+  .hero { max-width: 1100px; margin: 0 auto; padding: 5rem 2rem 4rem; text-align: center; }
+  .badge { display: inline-block; background: var(--bg3); border: 1px solid var(--accent); color: var(--accent); padding: .35rem .8rem; border-radius: 999px; font-size: .85rem; font-weight: 600; margin-bottom: 1.2rem; }
+  h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1.15; margin-bottom: 1rem; }
+  .accent { color: var(--accent); }
+  p.lead { color: var(--muted); font-size: clamp(1rem, 2vw, 1.2rem); max-width: 720px; margin: 0 auto 2rem; }
+  .cta { display: flex; gap: .8rem; justify-content: center; flex-wrap: wrap; }
+  .btn { padding: .85rem 1.6rem; border-radius: 8px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: .4rem; transition: transform .15s, opacity .15s; }
+  .btn:hover { transform: translateY(-1px); opacity: .92; }
+  .btn-primary { background: var(--accent); color: #000; }
+  .btn-secondary { background: var(--bg3); color: var(--text); border: 1px solid #2e3239; }
+  .features { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.2rem; }
+  .card { background: var(--bg2); border: 1px solid var(--bg3); border-radius: 12px; padding: 1.4rem; transition: border-color .2s, transform .2s; }
+  .card:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .card h3 { font-size: 1.05rem; margin-bottom: .5rem; color: var(--text); }
+  .card p { color: var(--muted); font-size: .95rem; }
+  footer { text-align: center; padding: 2rem; color: var(--muted); font-size: .9rem; border-top: 1px solid var(--bg3); }
+  @media (max-width: 640px) { header { padding: 1rem; } .hero { padding: 3rem 1rem 2.5rem; } .features { padding: 2rem 1rem 3rem; } }
+</style>
+</head>
+<body>
+  <header>
+    <div class="logo">Agent x402</div>
+    <nav>
+      <a href="#features">Возможности</a>
+      <a href="https://github.com/example/agent-x402" target="_blank">GitHub</a>
+      <a href="/">Все проекты</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="badge">Protocol</div>
+    <h1>Платёжный протокол <span class="accent">x402</span> для AI-агентов</h1>
+    <p class="lead">Безопасная машиночитаемая оплата между автономными системами. HTTP 402 — новый стандарт микроплатежей для API и агентов.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="https://github.com/example/agent-x402" target="_blank">GitHub →</a>
+      <a class="btn btn-secondary" href="https://agent-x402.demo.io" target="_blank">Демо</a>
+      <a class="btn btn-secondary" href="https://agent-x402.demo.io/docs" target="_blank">Документация</a>
+    </div>
+  </section>
+
+  <section class="features" id="features">
+    <div class="grid">
+      <div class="card"><h3>💸 Микроплатежи</h3><p>Поддержка кросс-чейн платежей с низкими комиссиями. Подходит для моделей API-доступа по требованию.</p></div>
+      <div class="card"><h3>🤖 Нативный протокол для агентов</h3><p>Спецификация HTTP 402 с детерминированным форматом и выразительными payload для машин.</p></div>
+      <div class="card"><h3>🔐 Аудируемые транзакции</h3><p>Каждый платёж регистрируется в цепочке, что позволяет легко проверять бухгалтерию и отслеживать расходы.</p></div>
+      <div class="card"><h3>🌐 Кросс-чейн</h3><p>Поддержка Ethereum, Solana, Bitcoin Lightning и других сетей через унифицированный SDK.</p></div>
+      <div class="card"><h3>🧩 SDK для разработчиков</h3><p>Пакеты для Python, TypeScript и Go. Интегрируйте x402 за несколько строк кода.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Agent x402. Все права защищены.</p>
+  </footer>
+
+  <div class="card" style="margin-top: 40px; text-align: center;">
+    <h2>Присоединяйтесь к сообществу</h2>
+    <div class="cta-buttons">
+      <a href="https://t.me/lumenchain" class="btn btn-primary" target="_blank">Telegram</a>
+      <a href="https://discord.gg/lumenchain" class="btn btn-secondary" target="_blank">Discord</a>
+      <a href="https://twitter.com/lumenchain" class="btn btn-secondary" target="_blank">Twitter</a>
+    </div>
+    <div class="card" style="margin-top: 20px;">
+      <h3>Получайте уведомления о запуске</h3>
+      <form id="email-form" onsubmit="event.preventDefault(); captureEmail();" style="max-width: 400px; margin: 0 auto;">
+        <input type="email" id="email-input" placeholder="your@email.com" required style="width: 100%; padding: 12px; margin-bottom: 10px; background: #0b0e11; border: 1px solid #2b3139; border-radius: 4px; color: #eaecef;">
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Подписаться</button>
+        <div id="email-status" style="margin-top: 10px; color: #848e9c; font-size: 14px;"></div>
+      </form>
+      <script>
+      function captureEmail() {
+        const email = document.getElementById('email-input').value.trim()
+        const status = document.getElementById('email-status')
+        if (!email) { status.textContent = 'Введите email'; return; }
+        status.textContent = 'Отправка...'
+        fetch('http://127.0.0.1:18902/api/email-capture', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, source: location.pathname })
+        })
+        .then(r => r.json())
+        .then(d => { status.textContent = d.ok ? '✅ Подписано!' : 'Ошибка'; })
+        .catch(() => { status.textContent = 'Ошибка соединения'; })
+      }
+      </script>
+    </div>
+  </div>
+</body>
+</html>
