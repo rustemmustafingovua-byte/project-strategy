@@ -1,0 +1,1 @@
+{"timestamp":"2026-10-28T23:21:26Z","services":[{"name":"lumen-chain","port":8789,"status":"ok","message":"healthy","checked_at":"2026-10-28T23:21:26Z"},{"name":"dashboard","port":18900,"status":"ok","message":"healthy","checked_at":"2026-10-28T23:21:26Z"},{"name":"email-capture","port":18910,"status":"ok","message":"healthy","checked_at":"2026-10-28T23:21:26Z"}],"overall":"ok"}
